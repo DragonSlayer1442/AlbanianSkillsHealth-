@@ -1,0 +1,11 @@
+MSH|^~\&|CARDIAC_MONITOR|REMOTE_MONITORING|EHR_SYSTEM|HOSPITAL|20240120150000||ORU^R01|MSG006|P|2.5
+PID|1||MRN-2024-006^^^MRN^MR||MILLER^JENNIFER^LYNN||19780330|F|||987 CEDAR LN^^TOWN^ST^33445||555-678-9012|||S||MRN-2024-006|987654326
+OBR|1|||REMOTE^REMOTE CARDIAC MONITORING^LN||20240120150000|20240120150000|||||||||678901^DOCTOR^THOMAS^MD|||||||F
+OBX|1|TX|Rhythm^Rhythm^LN|Atrial Fibrillation||||A|||F
+OBX|2|NM|Average Ventricular Rate^Average Ventricular Rate^LN|88|bpm^beats per minute^UCUM|60-100|N|||F
+OBX|3|NM|Episode Duration^Episode Duration^LN|45|min^minutes^UCUM||A|||F
+OBX|4|TX|Episode Start Time^Episode Start^LN|20240120141500||||N|||F
+OBX|5|TX|Episode End Time^Episode End^LN|20240120150000||||N|||F
+OBX|6|TX|Patient Symptom Report^Symptoms^LN|Palpitations reported||||A|||F
+OBX|7|TX|Clinical Significance^Clinical Significance^LN|Symptomatic episode requiring follow-up||||A|||F
+

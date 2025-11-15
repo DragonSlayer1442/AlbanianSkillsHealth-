@@ -1,0 +1,13 @@
+MSH|^~\&|ICD_SYSTEM|CARDIAC_DEVICE_CLINIC|EHR_SYSTEM|HOSPITAL|20240123130000||ORU^R01|MSG009|P|2.5
+PID|1||MRN-2024-009^^^MRN^MR||TAYLOR^RICHARD^ALAN||19671203|M|||369 WALNUT BLVD^^CITY^ST^88990||555-901-2345|||S||MRN-2024-009|987654329
+OBR|1|||ICD^IMPLANTABLE CARDIOVERTER DEFIBRILLATOR^LN||20240123130000|20240123140000|||||||||890123^DOCTOR^SUSAN^MD|||||||F
+OBX|1|TX|Device Type^Device Type^LN|Dual Chamber ICD||||N|||F
+OBX|2|TX|Device Serial Number^Serial Number^LN|ICD-2024-67890||||N|||F
+OBX|3|NM|Battery Voltage^Battery Voltage^LN|3.15|V^volts^UCUM|2.5-3.5|N|||F
+OBX|4|NM|Shock Impedance^Shock Impedance^LN|45|ohm^ohms^UCUM|30-100|N|||F
+OBX|5|NM|Ventricular Tachycardia Episodes^VT Episodes^LN|2|count^count^UCUM|0|A|||F
+OBX|6|NM|Ventricular Fibrillation Episodes^VF Episodes^LN|0|count^count^UCUM|0|N|||F
+OBX|7|NM|Therapies Delivered^Therapies Delivered^LN|2|count^count^UCUM|0|A|||F
+OBX|8|TX|Last Therapy^Last Therapy^LN|Antitachycardia Pacing - Successful||||N|||F
+OBX|9|TX|Device Status^Device Status^LN|Normal operation, therapies functioning||||N|||F
+

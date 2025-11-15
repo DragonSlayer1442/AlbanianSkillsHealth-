@@ -1,0 +1,10 @@
+MSH|^~\&|ADMISSION_SYSTEM|HOSPITAL_ADMISSIONS|EHR_SYSTEM|HOSPITAL|20240122080000||ORU^R01|MSG008|P|2.5
+PID|1||MRN-2024-008^^^MRN^MR||ANDERSON^AMANDA^ROSE||19920518|F|||258 SPRUCE ST^^TOWN^ST^66778||555-890-1234|||S||MRN-2024-008|987654328
+OBR|1|||ADMISSION^PATIENT ADMISSION^LN||20240122080000|20240122080000|||||||||123456^DOCTOR^JANE^MD|||||||F
+OBX|1|TX|Admission Diagnosis^Admission Diagnosis^LN|Heart Failure||||A|||F
+OBX|2|TX|Secondary Diagnosis^Secondary Diagnosis^LN|Atrial Fibrillation||||A|||F
+OBX|3|TX|Admission Location^Admission Location^LN|Intensive Care Unit||||N|||F
+OBX|4|NM|Heart Rate^Heart Rate^LN|92|bpm^beats per minute^UCUM|60-100|N|||F
+OBX|5|TX|Rhythm^Rhythm^LN|Atrial Fibrillation||||A|||F
+OBX|6|NM|Blood Pressure^Blood Pressure^LN|145/95|mmHg^millimeters of mercury^UCUM|120/80|A|||F
+

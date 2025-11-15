@@ -1,0 +1,16 @@
+MSH|^~\&|CARDIAC_COMPREHENSIVE|CARDIAC_CENTER|EHR_SYSTEM|HOSPITAL|20240124160000||ORU^R01|MSG010|P|2.5
+PID|1||MRN-2024-010^^^MRN^MR||MARTINEZ^CARLOS^ENRIQUE||19741025|M|||741 CHERRY CT^^TOWN^ST^99001||555-012-3456|||S||MRN-2024-010|987654330
+OBR|1|||COMPREHENSIVE^COMPREHENSIVE CARDIAC EVALUATION^LN||20240124150000|20240124160000|||||||||901234^DOCTOR^DAVID^MD|||||||F
+OBX|1|NM|Heart Rate^Heart Rate^LN|75|bpm^beats per minute^UCUM|60-100|N|||F
+OBX|2|TX|Rhythm^Rhythm^LN|Normal Sinus Rhythm||||N|||F
+OBX|3|NM|Blood Pressure^Blood Pressure^LN|128/82|mmHg^millimeters of mercury^UCUM|120/80|A|||F
+OBX|4|NM|Left Ventricular Ejection Fraction^LVEF^LN|55|%^percent^UCUM|50-70|N|||F
+OBX|5|NM|Left Ventricular End Diastolic Dimension^LVEDD^LN|5.0|cm^centimeters^UCUM|4.0-5.5|N|||F
+OBX|6|NM|Left Atrial Size^LA Size^LN|3.9|cm^centimeters^UCUM|3.0-4.0|N|||F
+OBX|7|TX|Mitral Valve^Mitral Valve^LN|Mild mitral regurgitation||||A|||F
+OBX|8|TX|Aortic Valve^Aortic Valve^LN|Normal||||N|||F
+OBX|9|TX|Tricuspid Valve^Tricuspid Valve^LN|Normal||||N|||F
+OBX|10|TX|Pulmonic Valve^Pulmonic Valve^LN|Normal||||N|||F
+OBX|11|NM|E/A Ratio^E/A Ratio^LN|1.2|ratio^ratio^UCUM|1.0-2.0|N|||F
+OBX|12|TX|Overall Assessment^Overall Assessment^LN|Mild left ventricular hypertrophy, otherwise normal function||||N|||F
+

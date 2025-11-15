@@ -1,0 +1,17 @@
+[
+    {
+        "username": "doctorFabi",
+        "role": "doctor",
+        "loggedinAt": "2025-11-15 22:51:02"
+    },
+    {
+        "username": "admin",
+        "role": "admin",
+        "loggedinAt": "2025-11-15 22:58:54"
+    },
+    {
+        "username": "doctorFlori",
+        "role": "doctor",
+        "loggedinAt": "2025-11-15 23:00:21"
+    }
+]

@@ -1,0 +1,11 @@
+MSH|^~\&|STRESS_TEST_SYSTEM|CARDIAC_LAB|EHR_SYSTEM|HOSPITAL|20240117100000||ORU^R01|MSG003|P|2.5
+PID|1||MRN-2024-003^^^MRN^MR||WILLIAMS^MICHAEL^DAVID||19651110|M|||789 ELM ST^^CITY^ST^11223||555-345-6789|||S||MRN-2024-003|987654323
+OBR|1|||STRESS^EXERCISE STRESS TEST^LN||20240117100000|20240117103000|||||||||345678^DOCTOR^EMILY^MD|||||||F
+OBX|1|NM|Resting Heart Rate^Resting Heart Rate^LN|65|bpm^beats per minute^UCUM|60-100|N|||F
+OBX|2|NM|Peak Heart Rate^Peak Heart Rate^LN|165|bpm^beats per minute^UCUM|150-180|N|||F
+OBX|3|NM|Resting Blood Pressure^Resting BP^LN|120/80|mmHg^millimeters of mercury^UCUM|120/80|N|||F
+OBX|4|NM|Peak Blood Pressure^Peak BP^LN|155/90|mmHg^millimeters of mercury^UCUM||A|||F
+OBX|5|NM|Exercise Duration^Exercise Duration^LN|8|min^minutes^UCUM|6-12|N|||F
+OBX|6|TX|ECG Changes^ECG Changes^LN|No significant ST segment changes||||N|||F
+OBX|7|TX|Test Interpretation^Test Interpretation^LN|Negative for ischemia||||N|||F
+

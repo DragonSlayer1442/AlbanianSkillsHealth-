@@ -1,0 +1,11 @@
+MSH|^~\&|LAB_SYSTEM|CARDIAC_LAB|EHR_SYSTEM|HOSPITAL|20240121110000||ORU^R01|MSG007|P|2.5
+PID|1||MRN-2024-007^^^MRN^MR||WILSON^CHRISTOPHER^PAUL||19890714|M|||147 BIRCH AVE^^CITY^ST^55667||555-789-0123|||S||MRN-2024-007|987654327
+OBR|1|||LAB^CARDIAC LAB PANEL^LN||20240121100000|20240121110000|||||||||789012^DOCTOR^MARIA^MD|||||||F
+OBX|1|NM|Troponin I^Troponin I^LN|0.02|ng/mL^nanograms per milliliter^UCUM|<0.04|N|||F
+OBX|2|NM|CK-MB^Creatine Kinase MB^LN|2.5|ng/mL^nanograms per milliliter^UCUM|<5.0|N|||F
+OBX|3|NM|BNP^Brain Natriuretic Peptide^LN|85|pg/mL^picograms per milliliter^UCUM|<100|N|||F
+OBX|4|NM|Total Cholesterol^Total Cholesterol^LN|185|mg/dL^milligrams per deciliter^UCUM|<200|N|||F
+OBX|5|NM|LDL Cholesterol^LDL Cholesterol^LN|110|mg/dL^milligrams per deciliter^UCUM|<100|A|||F
+OBX|6|NM|HDL Cholesterol^HDL Cholesterol^LN|55|mg/dL^milligrams per deciliter^UCUM|>40|N|||F
+OBX|7|NM|Triglycerides^Triglycerides^LN|150|mg/dL^milligrams per deciliter^UCUM|<150|N|||F
+

@@ -1,0 +1,11 @@
+MSH|^~\&|HOLTER_SYSTEM|CARDIAC_LAB|EHR_SYSTEM|HOSPITAL|20240116120000||ORU^R01|MSG002|P|2.5
+PID|1||MRN-2024-002^^^MRN^MR||JOHNSON^SARAH^ELIZABETH||19720620|F|||456 OAK AVE^^TOWN^ST^67890||555-234-5678|||S||MRN-2024-002|987654322
+OBR|1|||HOLTER^24-HOUR HOLTER MONITOR^LN||20240115120000|20240116120000|||||||||234567^DOCTOR^ROBERT^MD|||||||F
+OBX|1|NM|Average Heart Rate^Average Heart Rate^LN|68|bpm^beats per minute^UCUM|60-100|N|||F
+OBX|2|NM|Maximum Heart Rate^Maximum Heart Rate^LN|145|bpm^beats per minute^UCUM||A|||F
+OBX|3|NM|Minimum Heart Rate^Minimum Heart Rate^LN|52|bpm^beats per minute^UCUM||A|||F
+OBX|4|TX|Dominant Rhythm^Dominant Rhythm^LN|Normal Sinus Rhythm||||N|||F
+OBX|5|NM|Premature Ventricular Contractions^PVC Count^LN|12|count^count^UCUM|0-10|A|||F
+OBX|6|NM|Premature Atrial Contractions^PAC Count^LN|8|count^count^UCUM|0-10|N|||F
+OBX|7|TX|Arrhythmia Summary^Arrhythmia Summary^LN|Occasional PVCs, otherwise normal||||N|||F
+

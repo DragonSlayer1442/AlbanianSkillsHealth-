@@ -1,0 +1,11 @@
+MSH|^~\&|ECHO_SYSTEM|CARDIAC_IMAGING|EHR_SYSTEM|HOSPITAL|20240118140000||ORU^R01|MSG004|P|2.5
+PID|1||MRN-2024-004^^^MRN^MR||BROWN^PATRICIA^ANNE||19881205|F|||321 MAPLE DR^^TOWN^ST^44556||555-456-7890|||S||MRN-2024-004|987654324
+OBR|1|||ECHO^ECHOCARDIOGRAM^LN||20240118140000|20240118150000|||||||||456789^DOCTOR^JAMES^MD|||||||F
+OBX|1|NM|Left Ventricular Ejection Fraction^LVEF^LN|58|%^percent^UCUM|50-70|N|||F
+OBX|2|NM|Left Ventricular End Diastolic Dimension^LVEDD^LN|5.2|cm^centimeters^UCUM|4.0-5.5|N|||F
+OBX|3|NM|Left Ventricular End Systolic Dimension^LVESD^LN|3.4|cm^centimeters^UCUM|2.5-4.0|N|||F
+OBX|4|NM|Left Atrial Size^LA Size^LN|3.8|cm^centimeters^UCUM|3.0-4.0|N|||F
+OBX|5|TX|Mitral Valve^Mitral Valve^LN|Normal||||N|||F
+OBX|6|TX|Aortic Valve^Aortic Valve^LN|Mild regurgitation||||A|||F
+OBX|7|TX|Overall Impression^Overall Impression^LN|Normal left ventricular function||||N|||F
+

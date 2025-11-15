@@ -1,0 +1,13 @@
+MSH|^~\&|DEVICE_SYSTEM|CARDIAC_DEVICE_CLINIC|EHR_SYSTEM|HOSPITAL|20240119110000||ORU^R01|MSG005|P|2.5
+PID|1||MRN-2024-005^^^MRN^MR||DAVIS^ROBERT^CHARLES||19500422|M|||654 PINE ST^^CITY^ST^77889||555-567-8901|||S||MRN-2024-005|987654325
+OBR|1|||DEVICE^PACEMAKER INTERROGATION^LN||20240119110000|20240119113000|||||||||567890^DOCTOR^LISA^MD|||||||F
+OBX|1|TX|Device Type^Device Type^LN|Dual Chamber Pacemaker||||N|||F
+OBX|2|TX|Device Serial Number^Serial Number^LN|PM-2024-12345||||N|||F
+OBX|3|NM|Battery Voltage^Battery Voltage^LN|2.85|V^volts^UCUM|2.5-3.0|N|||F
+OBX|4|NM|Battery Impedance^Battery Impedance^LN|1200|ohm^ohms^UCUM|1000-2000|N|||F
+OBX|5|NM|Atrial Lead Impedance^Atrial Lead Impedance^LN|450|ohm^ohms^UCUM|200-1500|N|||F
+OBX|6|NM|Ventricular Lead Impedance^Ventricular Lead Impedance^LN|520|ohm^ohms^UCUM|200-1500|N|||F
+OBX|7|NM|Atrial Pacing Percentage^Atrial Pacing %^LN|15|%^percent^UCUM|0-100|N|||F
+OBX|8|NM|Ventricular Pacing Percentage^Ventricular Pacing %^LN|8|%^percent^UCUM|0-100|N|||F
+OBX|9|TX|Device Status^Device Status^LN|Normal operation||||N|||F
+
