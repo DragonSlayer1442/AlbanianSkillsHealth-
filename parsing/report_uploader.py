@@ -12,7 +12,7 @@ def upload_report():
         print("ERROR: User not authenticated.")
         return
 
-    if current_user["role"] not in ["doctor", "nurse"]:
+    if current_user.role not in ["doctor", "nurse"]:
         print("ERROR: Only doctors and nurses can upload reports.")
         return
 

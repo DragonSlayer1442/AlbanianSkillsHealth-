@@ -13,5 +13,35 @@
         "username": "doctorFlori",
         "role": "doctor",
         "loggedinAt": "2025-11-15 23:00:21"
+    },
+    {
+        "username": "admin",
+        "role": "admin",
+        "timestamp": "2025-11-15 23:31:02"
+    },
+    {
+        "username": "doctorFabi",
+        "role": "doctor",
+        "timestamp": "2025-11-15 23:32:33"
+    },
+    {
+        "username": "admin",
+        "role": "admin",
+        "timestamp": "2025-11-15 23:37:15"
+    },
+    {
+        "username": "nurseDea",
+        "role": "nurse",
+        "timestamp": "2025-11-15 23:38:07"
+    },
+    {
+        "username": "nurseDea",
+        "role": "nurse",
+        "loggedinAt": "2025-11-15 23:48:00"
+    },
+    {
+        "username": "nurseDea",
+        "role": "nurse",
+        "loggedinAt": "2025-11-15 23:52:18"
     }
 ]

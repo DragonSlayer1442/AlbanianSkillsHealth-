@@ -1,24 +1,17 @@
-{
-    "users": [
-        {
-            "username": "admin",
-            "passwordHash": "$2b$12$AX4EyvLsr5DMjAtMiajHm.9GawxoQlGy3vpI6wUxGPdfjEgi9Eaf2",
-            "role": "admin"
-        },
-        {
-            "username": "doctorFabi",
-            "passwordHash": "$2b$12$rEGtm7sfBxXE6/BVoYEhmekZrjHoeTVEYkMpIIIyyec8RWBXZyR5W",
-            "role": "doctor"
-        },
-        {
-            "username": "nurseAdela",
-            "passwordHash": "$2b$12$1ZFEgWlsqeQNarit.uZ8dehZNJbCe0woeSiCOD/crn4P/UQUNfYV.",
-            "role": "nurse"
-        },
-        {
-            "username": "doctorFlori",
-            "passwordHash": "$2b$12$OuSD.KGFw40Lh4.0.jkIM.fUYAWeIG1nfStpwLPcJ0k9j7wBdUTuS",
-            "role": "doctor"
-        }
-    ]
-}
+[
+    {
+        "username": "admin",
+        "passwordHash": "$2b$12$TjTC2B2YKI24vtUJCsgoYOBwcCnC/3.zznwrO.FKrEzU1Yb/67uXm",
+        "role": "admin"
+    },
+    {
+        "username": "doctorFabi",
+        "passwordHash": "$2b$12$KdolfUqQe1GcgdaC2wAsZ.0Aksy7y9WinKztFwTaOo/NPgz8vjL1.",
+        "role": "doctor"
+    },
+    {
+        "username": "nurseDea",
+        "passwordHash": "$2b$12$S9kZmchiEF13d0gw9DXjkuqjuB9GTCaEc2wOOLlWcJy6vU4ARvVLi",
+        "role": "nurse"
+    }
+]

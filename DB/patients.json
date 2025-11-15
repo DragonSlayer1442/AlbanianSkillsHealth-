@@ -8,27 +8,11 @@
         "Transmissions": []
     },
     {
-        "patientID": "41d515ab-6ae4-423c-9bdc-bfa6344c6413",
-        "MRN": "MRN123458",
-        "Name": "Loreset Sollaku",
-        "DOB": "01/05/2006",
+        "patientID": "eaa254e0-57bc-4d5a-ac7c-9dbf61d71ad3",
+        "MRN": "MRN342156",
+        "Name": "Aleks Firaj",
+        "DOB": "01/16/2007",
         "AssignedDoctor": "doctorFabi",
-        "Transmissions": []
-    },
-    {
-        "patientID": "f97a5077-345c-4834-b049-4943497dedcd",
-        "MRN": "MRN342153",
-        "Name": "Marinela Jorgji",
-        "DOB": "08/28/1986",
-        "AssignedDoctor": "doctorFabi",
-        "Transmissions": []
-    },
-    {
-        "patientID": "9535ed89-1612-48e4-b439-1f4094ee23b1",
-        "MRN": "MRN112233",
-        "Name": "Ores Sherifi",
-        "DOB": "10/23/2006",
-        "AssignedDoctor": "doctorFlori",
         "Transmissions": []
     }
 ]
