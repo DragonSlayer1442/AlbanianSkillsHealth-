@@ -41,6 +41,7 @@ def upload_report():
         else:
             print("\nERROR: Failed to parse PDF.")
 
+    
 
     if not report:
         return
@@ -49,18 +50,23 @@ def upload_report():
     patient_manager = PatientManager()
     pid = report.get("patientIdentifiers", {})
 
-    report_mrn = pid.get("mrn", "")
-    report_name = pid.get("name", "")
-    report_dob = pid.get("dateOfBirth", "")
+    # First try exact match
+    matched_patient = patient_manager.match_patient(
+        pid.get("mrn", ""), 
+        pid.get("name", ""), 
+        pid.get("dateOfBirth", "")
+    )
 
-    matched_patient = patient_manager.match_patient(report_mrn, report_name, report_dob)
-
-    if not matched_patient:
-        print("ERROR: No matching patient found. Transmission NOT stored.")
-        return
-
-    matched_patient.add_transmission(report)
-    if patient_manager.save_patients():
-        print(f"\nSUCCESS: Report matched and stored for patient {matched_patient.Name} (MRN: {matched_patient.MRN})")
+    if matched_patient:
+        print(f"Exact match found: {matched_patient.Name} ({matched_patient.MRN})")
     else:
-        print("ERROR: Could not save updated patient data.")
+        print("No exact match found. Attempting fuzzy matching...")
+        matched_patient, confidence, details = patient_manager.fuzzy_match_patient(pid)
+        if matched_patient:
+            print(f"Found potential match: {matched_patient.Name} ({matched_patient.MRN})")
+            print(f"Match confidence: {confidence}% (MRN: {details['mrn_score']}%, Name: {details['name_score']}%, DOB: {details['dob_score']}%)")
+            if confidence < 85:
+                print(f"WARNING: Low confidence match ({confidence}%). Please verify patient.")
+        else:
+            print(f"ERROR: No match found above threshold ({confidence}%). Transmission NOT stored.")
+            return

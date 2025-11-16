@@ -1,12 +1,7 @@
 import os
 import uuid
 import re
-
-try:
-    import PyPDF2
-except ImportError:
-    PyPDF2 = None
-
+import PyPDF2
 
 def parse_pdf_report(file_path):
     if PyPDF2 is None:

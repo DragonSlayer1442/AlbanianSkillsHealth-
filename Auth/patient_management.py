@@ -3,6 +3,7 @@ import os
 import re
 import uuid
 import json
+from rapidfuzz import fuzz
 from datetime import datetime
 from .user_management import get_current_user
 from .db_utils import read_patients, write_patients
@@ -239,3 +240,39 @@ class PatientManager:
 
         return None
 
+    # FUZZY MATCHING
+    from rapidfuzz import fuzz
+
+    def fuzzy_match_patient(self, report_identifiers, threshold=80):
+        report_mrn = report_identifiers.get("mrn", "").strip().lower()
+        report_name = report_identifiers.get("name", "").strip().lower()
+        report_dob = report_identifiers.get("dateOfBirth", "").strip()
+
+        best_match = None
+        best_score = 0
+        details = {}
+
+        for p in self.patients:
+            # Only calculate for assigned patients if you want
+            # For general match: remove doctor filter
+            # p.AssignedDoctor == current_doctor.username
+
+            mrn_score = fuzz.ratio(report_mrn, p.MRN.lower())
+            name_score = fuzz.ratio(report_name, p.Name.lower())
+            dob_score = 100 if self.normalize_dob(report_dob) == self.normalize_dob(p.DOB) else 0
+
+            # Weighted scoring: MRN=100%, Name=80%, DOB=60%
+            combined_score = (mrn_score * 1.0 + name_score * 0.8 + dob_score * 0.6) / 2.4  # normalize to 0-100
+
+            if combined_score > best_score:
+                best_score = combined_score
+                best_match = p
+                details = {
+                    "mrn_score": mrn_score,
+                    "name_score": name_score,
+                    "dob_score": dob_score
+                }
+
+        if best_score >= threshold:
+            return best_match, round(best_score), details
+        return None, round(best_score), details
