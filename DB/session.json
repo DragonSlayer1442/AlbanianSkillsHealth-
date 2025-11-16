@@ -13,5 +13,20 @@
         "username": "nurseDea",
         "role": "nurse",
         "loggedinAt": "2025-11-16 02:50:55"
+    },
+    {
+        "username": "doctorFabi",
+        "role": "doctor",
+        "loggedinAt": "2025-11-16 09:34:00"
+    },
+    {
+        "username": "admin",
+        "role": "admin",
+        "loggedinAt": "2025-11-16 09:35:29"
+    },
+    {
+        "username": "doctorKristi",
+        "role": "doctor",
+        "loggedinAt": "2025-11-16 09:36:16"
     }
 ]

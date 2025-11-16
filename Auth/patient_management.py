@@ -93,10 +93,10 @@ class PatientManager:
     def save_patients(self):
         return write_patients([p.to_dict() for p in self.patients])
 
-    # ---------------- NORMALIZATION HELPERS ---------------- #
+    # NORMALIZATION HELPERS
 
     def normalize_mrn(self, mrn: str) -> str:
-        """Extract digits only from MRN, e.g., MRN-0022-445 -> 0022445"""
+        """Extract digits only from MRN, MRN-0022-445 -> 0022445"""
         if not mrn:
             return ""
         return "".join(re.findall(r"\d+", mrn))
@@ -124,7 +124,7 @@ class PatientManager:
                 pass
         return dob  # fallback
 
-    # ---------------- MATCHING LOGIC ---------------- #
+    # MATCHING LOGIC
 
     def match_patient(self, mrn: str, name: str, dob: str):
         """

@@ -13,5 +13,10 @@
         "username": "nurseDea",
         "passwordHash": "$2b$12$S9kZmchiEF13d0gw9DXjkuqjuB9GTCaEc2wOOLlWcJy6vU4ARvVLi",
         "role": "nurse"
+    },
+    {
+        "username": "doctorKristi",
+        "passwordHash": "$2b$12$V4mEmT2pOrVx1no2fIC8tuFwM0ucI.2orf4.MgDZfIsLvLf6q33n.",
+        "role": "doctor"
     }
 ]

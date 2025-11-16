@@ -3,6 +3,7 @@ from .user_management import login, logout, get_current_user
 from .user_management import Admin
 from .patient_management import create_patient
 from parsing.report_uploader import upload_report
+from .doctor_dashboard import run_dashboard
 
 def run_cli():
     print("Welcome to Health+ CLI. Type 'help' to see commands.")
@@ -22,16 +23,19 @@ def run_cli():
             create_patient()
         elif command == "upload-report":
             upload_report()
+        elif command == "dashboard":
+            run_dashboard()
         elif command == "exit":
             print("Exiting CLI...")
             break
         elif command == "help":
             print("Available commands:")
-            print("login - Log in to the system")
-            print("logout - Log out of the system")
-            print("create-user - Admin only, create doctor/nurse account")
-            print("create-patient - Doctors only, create patient record")
-            print("upload-report - Doctors/Nurses only, upload HL7/PDF report")
+            print("login ")
+            print("logout ")
+            print("create-user ")
+            print("create-patient")
+            print("dashboard ")
+            print("upload-report ")
             print("exit - Exit the CLI")
         else:
             print("Unknown command. Type 'help' to see commands.")
