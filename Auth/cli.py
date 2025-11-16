@@ -1,7 +1,7 @@
 # Auth/cli.py
 from .user_management import login, logout, get_current_user
 from .user_management import Admin
-from .patient_management import create_patient
+from .patient_management import create_patient , search_patient
 from parsing.report_uploader import upload_report
 from .doctor_dashboard import run_dashboard
 
@@ -23,6 +23,8 @@ def run_cli():
             create_patient()
         elif command == "upload-report":
             upload_report()
+        elif command == "search-patient":
+            search_patient()    
         elif command == "dashboard":
             run_dashboard()
         elif command == "exit":
@@ -35,6 +37,7 @@ def run_cli():
             print("create-user ")
             print("create-patient")
             print("dashboard ")
+            print("search-patient")
             print("upload-report ")
             print("exit - Exit the CLI")
         else:

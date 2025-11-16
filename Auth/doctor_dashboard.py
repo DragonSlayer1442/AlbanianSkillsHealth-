@@ -7,7 +7,6 @@ from .db_utils import read_patients
 def parse_report_date(report_date_str: str) -> str:
     """
     Convert HL7-style timestamp like 20240116120000 -> '2024-01-16 12:00:00'
-    If parsing fails, return the original string.
     """
     if not report_date_str:
         return ""
@@ -21,14 +20,10 @@ def parse_report_date(report_date_str: str) -> str:
 
 
 def format_observation(obs: dict) -> str:
-    """
-    Return a short human-readable observation string.
-    Uses code, value, unit, referenceRange, abnormalFlag where present.
-    """
     code = obs.get("code") or obs.get("observation", "Unknown")
     value = obs.get("value") or ""
     unit_raw = obs.get("unit") or ""
-    # unit may be HL7 component "bpm^beats per minute^UCUM" - use first or human part
+    # "bpm^beats per minute^UCUM" - bpm per minute
     unit = ""
     if unit_raw:
         unit_parts = unit_raw.split("^")

@@ -86,6 +86,88 @@ def create_patient():
     if write_patients(patients):
         print(f"SUCCESS: Patient '{name}' created successfully with PatientID {patient_record.patientID}.")
 
+#PATIENT SEARCH#
+
+def search_patients_for_doctor(query, doctor_username):
+
+    query = query.strip().lower()
+    if not query:
+        print("ERROR: Search query cannot be empty.")
+        return []
+
+    manager = PatientManager()
+    results = []
+
+    # Filter patients assigned to this doctor
+    assigned_patients = [p for p in manager.patients if p.AssignedDoctor.lower() == doctor_username.lower()]
+
+    # MRN search 
+    for p in assigned_patients:
+        if query in p.MRN.lower():
+            results.append(p)
+
+    # If MRN found, return immediately
+    if results:
+        return results
+
+    # Name search (partial, case-insensitive)
+    for p in assigned_patients:
+        if query in p.Name.lower():
+            results.append(p)
+
+    return results
+
+
+def display_patient_details(p):
+    print("\n=== Patient Details ===")
+    print(f"Name: {p.Name}")
+    print(f"MRN: {p.MRN}")
+    print(f"DOB: {p.DOB}")
+    print(f"Assigned Doctor: {p.AssignedDoctor}")
+    print(f"Total Transmissions: {len(p.Transmissions)}")
+
+
+def search_patient():
+    current_user = get_current_user()
+    if not current_user:
+        print("ERROR: User not authenticated. Please login first.")
+        return
+    if current_user.role != "doctor":
+        print("ERROR: Permission denied. Only doctors can search patients.")
+        return
+
+    query = input("Enter search query: ").strip()
+    if not query:
+        print("ERROR: Search query cannot be empty.")
+        return
+
+    matches = search_patients_for_doctor(query, current_user.username)
+    if not matches:
+        print(f"ERROR: No patients found matching '{query}'.")
+        return
+
+    # Auto-display if only one match
+    if len(matches) == 1:
+        print("Found 1 patient. Displaying details...")
+        display_patient_details(matches[0])
+        return
+
+    # Multiple matches - show numbered list
+    print("\n=== Search Results ===")
+    print(f"Found {len(matches)} patients:")
+    for i, p in enumerate(matches, start=1):
+        print(f"{i}. {p.Name} (MRN: {p.MRN}, DOB: {p.DOB}) - {len(p.Transmissions)} transmissions")
+
+    while True:
+        choice = input("Enter patient number to view details, or 'back' to return: ").strip()
+        if choice.lower() == "back":
+            return
+        if choice.isdigit() and 1 <= int(choice) <= len(matches):
+            display_patient_details(matches[int(choice)-1])
+            return
+        print("Invalid input. Try again.")
+
+
 class PatientManager:
     def __init__(self):
         self.patients = [Patient(**p) for p in read_patients()]
@@ -156,3 +238,4 @@ class PatientManager:
                     return p  # exact name + DOB match
 
         return None
+
