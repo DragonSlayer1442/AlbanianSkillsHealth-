@@ -1,18 +1,142 @@
 [
     {
-        "patientID": "f57cfcc0-6139-4b54-bade-0b10eee9a55d",
-        "MRN": "MRN123457",
-        "Name": "Vangjel Qirici",
-        "DOB": "05/07/2007",
+        "patientID": "402699e2-99e4-431f-aad6-0da77c3f1b0a",
+        "MRN": "MRN2024002",
+        "Name": "Sarah Johnson",
+        "DOB": "06/20/1972",
         "AssignedDoctor": "doctorFabi",
-        "Transmissions": []
+        "Transmissions": [
+            {
+                "reportId": "afa545df-8b73-4512-857c-3abe1eb61ed1",
+                "reportDate": "20240116120000",
+                "messageType": "ORU^R01",
+                "patientIdentifiers": {
+                    "mrn": "MRN-2024-002^^^MRN^MR",
+                    "name": "JOHNSON^SARAH^ELIZABETH",
+                    "dateOfBirth": "19720620"
+                },
+                "observations": [
+                    {
+                        "code": "Average Heart Rate",
+                        "value": "68",
+                        "unit": "bpm^beats per minute^UCUM",
+                        "referenceRange": "60-100",
+                        "abnormalFlag": "N"
+                    },
+                    {
+                        "code": "Maximum Heart Rate",
+                        "value": "145",
+                        "unit": "bpm^beats per minute^UCUM",
+                        "referenceRange": "",
+                        "abnormalFlag": "A"
+                    },
+                    {
+                        "code": "Minimum Heart Rate",
+                        "value": "52",
+                        "unit": "bpm^beats per minute^UCUM",
+                        "referenceRange": "",
+                        "abnormalFlag": "A"
+                    },
+                    {
+                        "code": "Dominant Rhythm",
+                        "value": "Normal Sinus Rhythm",
+                        "unit": "",
+                        "referenceRange": "",
+                        "abnormalFlag": ""
+                    },
+                    {
+                        "code": "Premature Ventricular Contractions",
+                        "value": "12",
+                        "unit": "count^count^UCUM",
+                        "referenceRange": "0-10",
+                        "abnormalFlag": "A"
+                    },
+                    {
+                        "code": "Premature Atrial Contractions",
+                        "value": "8",
+                        "unit": "count^count^UCUM",
+                        "referenceRange": "0-10",
+                        "abnormalFlag": "N"
+                    },
+                    {
+                        "code": "Arrhythmia Summary",
+                        "value": "Occasional PVCs, otherwise normal",
+                        "unit": "",
+                        "referenceRange": "",
+                        "abnormalFlag": ""
+                    }
+                ]
+            }
+        ]
     },
     {
-        "patientID": "eaa254e0-57bc-4d5a-ac7c-9dbf61d71ad3",
-        "MRN": "MRN342156",
-        "Name": "Aleks Firaj",
-        "DOB": "01/16/2007",
+        "patientID": "94414b57-5ed3-437e-a298-9d66bceee8d2",
+        "MRN": "MRN2024004",
+        "Name": "Patricia Brown",
+        "DOB": "05/12/1988",
         "AssignedDoctor": "doctorFabi",
-        "Transmissions": []
+        "Transmissions": [
+            {
+                "reportId": "77e39d44-e533-4a15-a062-6a09e068b556",
+                "reportDate": "20240118140000",
+                "messageType": "ORU^R01",
+                "patientIdentifiers": {
+                    "mrn": "MRN-2024-004^^^MRN^MR",
+                    "name": "BROWN^PATRICIA^ANNE",
+                    "dateOfBirth": "19881205"
+                },
+                "observations": [
+                    {
+                        "code": "Left Ventricular Ejection Fraction",
+                        "value": "58",
+                        "unit": "%^percent^UCUM",
+                        "referenceRange": "50-70",
+                        "abnormalFlag": "N"
+                    },
+                    {
+                        "code": "Left Ventricular End Diastolic Dimension",
+                        "value": "5.2",
+                        "unit": "cm^centimeters^UCUM",
+                        "referenceRange": "4.0-5.5",
+                        "abnormalFlag": "N"
+                    },
+                    {
+                        "code": "Left Ventricular End Systolic Dimension",
+                        "value": "3.4",
+                        "unit": "cm^centimeters^UCUM",
+                        "referenceRange": "2.5-4.0",
+                        "abnormalFlag": "N"
+                    },
+                    {
+                        "code": "Left Atrial Size",
+                        "value": "3.8",
+                        "unit": "cm^centimeters^UCUM",
+                        "referenceRange": "3.0-4.0",
+                        "abnormalFlag": "N"
+                    },
+                    {
+                        "code": "Mitral Valve",
+                        "value": "Normal",
+                        "unit": "",
+                        "referenceRange": "",
+                        "abnormalFlag": ""
+                    },
+                    {
+                        "code": "Aortic Valve",
+                        "value": "Mild regurgitation",
+                        "unit": "",
+                        "referenceRange": "",
+                        "abnormalFlag": ""
+                    },
+                    {
+                        "code": "Overall Impression",
+                        "value": "Normal left ventricular function",
+                        "unit": "",
+                        "referenceRange": "",
+                        "abnormalFlag": ""
+                    }
+                ]
+            }
+        ]
     }
 ]

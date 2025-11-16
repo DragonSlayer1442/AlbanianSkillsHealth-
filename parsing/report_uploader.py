@@ -1,13 +1,13 @@
+# Auth/parsing/report_uploader.py
 import json
 from .hl7_parser import parse_hl7_file
 from .pdf_parser import parse_pdf_report
 from Auth.user_management import get_current_user
-
+from Auth.patient_management import PatientManager
 
 def upload_report():
     current_user = get_current_user()
 
-    # Auth
     if not current_user:
         print("ERROR: User not authenticated.")
         return
@@ -22,34 +22,45 @@ def upload_report():
         print("ERROR: Unsupported file type.")
         return
 
-    # HL7
+    report = None
+    errors = []
+
+    # --- Parse HL7 ---
     if file_path.endswith(".hl7"):
         report, errors = parse_hl7_file(file_path)
-
         if report:
             print("\nSUCCESS: HL7 parsed successfully!")
-            print(json.dumps(report, indent=4))
         else:
             print("\nERROR: Corrupted HL7 file.")
 
-        if errors:
-            print("\n--- ERRORS / WARNINGS ---")
-            for e in errors:
-                print("•", e)
-        return
-
-    # PDF
+    # --- Parse PDF ---
     if file_path.endswith(".pdf"):
         report, errors = parse_pdf_report(file_path)
-
         if report:
             print("\nSUCCESS: PDF parsed successfully!")
-            print(json.dumps(report, indent=4))
         else:
             print("\nERROR: Failed to parse PDF.")
 
-        if errors:
-            print("\n--- ERRORS / WARNINGS ---")
-            for e in errors:
-                print("•", e)
+
+    if not report:
         return
+
+    # --- Patient Matching ---
+    patient_manager = PatientManager()
+    pid = report.get("patientIdentifiers", {})
+
+    report_mrn = pid.get("mrn", "")
+    report_name = pid.get("name", "")
+    report_dob = pid.get("dateOfBirth", "")
+
+    matched_patient = patient_manager.match_patient(report_mrn, report_name, report_dob)
+
+    if not matched_patient:
+        print("ERROR: No matching patient found. Transmission NOT stored.")
+        return
+
+    matched_patient.add_transmission(report)
+    if patient_manager.save_patients():
+        print(f"\nSUCCESS: Report matched and stored for patient {matched_patient.Name} (MRN: {matched_patient.MRN})")
+    else:
+        print("ERROR: Could not save updated patient data.")
